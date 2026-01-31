@@ -34,6 +34,12 @@ export type Desktop =
   | 'hyprland'
   | 'bspwm'
   | 'awesome'
+  | 'icewm'
+  | 'fluxbox'
+  | 'jwm'
+  | 'gamescope'
+  | 'onyx'
+  | 'moksha'
   | 'none';
 
 export type Category =

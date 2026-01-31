@@ -77,6 +77,36 @@ export const DESKTOPS: { value: Desktop; label: string; description: string }[] 
     description: 'Highly configurable tiling window manager',
   },
   {
+    value: 'icewm',
+    label: 'IceWM',
+    description: 'Lightweight window manager with Windows 95 look',
+  },
+  {
+    value: 'fluxbox',
+    label: 'Fluxbox',
+    description: 'Minimalist and fast window manager',
+  },
+  {
+    value: 'jwm',
+    label: 'JWM',
+    description: 'Joe\'s Window Manager - extremely lightweight',
+  },
+  {
+    value: 'gamescope',
+    label: 'Gamescope',
+    description: 'Gaming-focused Wayland compositor',
+  },
+  {
+    value: 'onyx',
+    label: 'Onyx',
+    description: 'Custom desktop environment by Crystal Linux',
+  },
+  {
+    value: 'moksha',
+    label: 'Moksha',
+    description: 'Enlightenment fork with traditional features',
+  },
+  {
     value: 'none',
     label: 'None / Custom',
     description: 'No default DE, bring your own',
