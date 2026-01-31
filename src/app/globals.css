@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-surface-1;
+  }
+
+  body {
+    @apply bg-base text-text font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  /* Glass Card - Acrylic/Mica effect */
+  .glass-card {
+    @apply bg-surface-0/50 backdrop-blur-md border border-surface-1/50;
+    @apply rounded-lg shadow-lg;
+  }
+
+  /* Glass Card variant with more transparency */
+  .glass-card-light {
+    @apply bg-surface-0/30 backdrop-blur-lg border border-surface-1/30;
+    @apply rounded-lg shadow-md;
+  }
+
+  /* Glow effect on focus */
+  .glow-focus {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lavender/50;
+    @apply focus-visible:shadow-glow-sm;
+    @apply transition-shadow duration-200;
+  }
+
+  /* Base button styles */
+  .btn-base {
+    @apply px-4 py-2 rounded-md font-medium text-sm;
+    @apply transition-all duration-200;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3 rounded-md font-medium text-base;
+    @apply transition-all duration-200;
+  }
+
+  /* Button primary with glow on hover */
+  .btn-primary {
+    @apply btn-base bg-blue hover:bg-blue/90 text-crust;
+    @apply hover:shadow-glow-sm;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/50;
+  }
+
+  .btn-primary-lg {
+    @apply btn-lg bg-blue hover:bg-blue/90 text-crust;
+    @apply hover:shadow-glow-sm;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue/50;
+  }
+
+  /* Button secondary */
+  .btn-secondary {
+    @apply btn-base bg-surface-1 hover:bg-surface-2 text-text;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lavender/50;
+  }
+
+  .btn-secondary-lg {
+    @apply btn-lg bg-surface-1 hover:bg-surface-2 text-text;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lavender/50;
+  }
+
+  /* Button ghost */
+  .btn-ghost {
+    @apply btn-base hover:bg-surface-0/50 text-text;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lavender/50;
+  }
+
+  /* Tag/Badge with monospace font */
+  .tag {
+    @apply inline-flex items-center px-2 py-1 rounded-md;
+    @apply bg-surface-1/50 text-text-muted;
+    @apply font-mono text-xs;
+    @apply border border-surface-2/50;
+  }
+
+  /* Subtle separator */
+  .separator {
+    @apply h-px bg-surface-1/50 border-0;
+  }
+
+  /* Container with max-width - ~1100px content */
+  .container-custom {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Narrower container for questionnaire/forms - ~900px */
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    @apply scroll-smooth;
+  }
+
+  /* Hide scrollbar but keep functionality */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer utilities {
+  /* Text gradient (use sparingly) */
+  .text-gradient {
+    @apply bg-gradient-to-r from-lavender to-blue bg-clip-text text-transparent;
+  }
+
+  /* Subtle glow text */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(180, 190, 254, 0.3);
+  }
+}
