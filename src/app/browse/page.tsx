@@ -62,7 +62,7 @@ function BrowsePageContent() {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Sidebar - Filters */}
           <aside className="lg:col-span-1">
-            <div className="sticky top-20">
+            <div className="sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto custom-scrollbar pr-2">
               <FilterPanel
                 filters={filters}
                 onToggleFilter={toggleFilter}
